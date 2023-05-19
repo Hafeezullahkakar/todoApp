@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - logs:/app/logs
+
+      - ./backend:/app
+
+      - /app/node_modules
+
+    environment:
+      - MONGO_CONNECTION_STRING=mongodb+srv://hafeezullah2023:hafeezullah2023@cluster0.vddszir.mongodb.net/
+
+    depends_on:
+      - frontend
+
+  frontend:
+    build: ./frontend
+
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - ./frontend/src:/app/src
+
+    stdin_open: true
+
+    tty: true
+
+volumes:
+  logs:

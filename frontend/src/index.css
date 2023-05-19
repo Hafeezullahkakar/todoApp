@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding-top: 4rem;
   position: relative;
   overflow: hidden;
