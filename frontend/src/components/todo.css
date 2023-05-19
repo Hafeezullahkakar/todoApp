@@ -1,0 +1,55 @@
+.todo_input > input {
+  background: #7d776a;
+  border-radius: 8px;
+  width: 366px;
+  height: 64px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  backdrop-filter: blur(5.43656px);
+  color: "white";
+  font-size: 1rem;
+  opacity: 0.8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.add_button > input {
+  background: #5a8277;
+  border-radius: 8px;
+  width: 382px;
+  height: 64px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  backdrop-filter: blur(5.43656px);
+  color: "white";
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 10px;
+  /* font-family: 'Montserrat', sans-serif; */
+  cursor: pointer;
+}
+input {
+  color: white;
+}
+input::placeholder {
+  color: white;
+}
+
+.todo_input {
+  display: flex;
+  justify-content: center;
+}
+
+.todo_list {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5.43656px);
+  margin-top: 8px;
+  border-radius: 10px;
+  opacity: 0.99;
+  width: 384px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
