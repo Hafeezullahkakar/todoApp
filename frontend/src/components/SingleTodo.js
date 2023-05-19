@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { GrDrag } from "react-icons/gr";
-import {  BsFillCheckCircleFill ,BsCircle } from "react-icons/bs";
+import { BsFillCheckCircleFill, BsCircle } from "react-icons/bs";
 // import {BsCircle} from 'react-icons/bi'
 import "./SingleTodo.css";
 function SingleTodo({
@@ -34,19 +34,22 @@ function SingleTodo({
         <div className="done_icon">
           {!isCompleted ? (
             <span className="done_Icon" onClick={completeTodo}>
-              <BsCircle style={{fontSize:"1.2rem"}} />
+              <BsCircle style={{ fontSize: "1.2rem" }} />
             </span>
           ) : (
             <span className="done_Icon">
-              <BsFillCheckCircleFill  style={{fontSize:"1.2rem"}}/>
+              <BsFillCheckCircleFill
+                className="doneIcon"
+                style={{ fontSize: "1.2rem" }}
+              />
             </span>
           )}
         </div>
         <div className="task">
           <p className="todo_text">{task}</p>
         </div>
-        <span className="del_icon">
-          <GrDrag className="d_icon" onClick={deleteToDo} />
+        <span className="del_icon" onClick={deleteToDo}>
+          <GrDrag className="d_icon" />
         </span>
       </div>
 

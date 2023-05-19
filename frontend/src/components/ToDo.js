@@ -39,6 +39,7 @@ const ToDo = () => {
           className="input"
           onChange={(e) => setText(e.target.value)}
           onKeyPress={handleKeyPress}
+          data-test="new-todo"
         />
       </div>
 
@@ -60,6 +61,7 @@ const ToDo = () => {
         <input
           type="button"
           placeholder="Add"
+          data-test="new-todo-button"
           value="Add todo"
           className="input"
           onClick={(e) => addToDo(text, setText, setToDoList)}

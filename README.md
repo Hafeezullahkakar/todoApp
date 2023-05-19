@@ -84,3 +84,26 @@ todo-app/
 ```
 
 Thank you for using the Todo App! If you have any questions or feedback, please don't hesitate to reach out.
+
+## For Testing 
+
+
+ ```bash
+   # Start the frontend server
+
+   cd ../frontend
+   npm install cypress --save-dev
+
+   ##And then run the tests by:
+
+   npx cypress open
+   ```
+
+   This will open a new cypress tab. Select e2e testing and your favourite browser. In browser, select 
+   todo.cy.js file and the test will run.
+
+   Below is the screenshot:
+
+   
+
+
