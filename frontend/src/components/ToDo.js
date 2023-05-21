@@ -16,7 +16,6 @@ const ToDo = () => {
   useEffect(() => {
     getAllToDo(setToDoList);
   }, []);
-  console.log("all todos: ", todoList);
 
   const [text, setText] = useState("");
 
@@ -24,7 +23,6 @@ const ToDo = () => {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      console.log("enter is pressed");
       addToDo(text, setText, setToDoList);
     }
   };

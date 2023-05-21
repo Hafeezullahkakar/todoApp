@@ -13,7 +13,6 @@ const addToDo = (task, setText, setTodoList) => {
     .post(`${baseUrl}/save`, { task })
     .then((data) => {
       setText("");
-      console.log("task added");
       getAllToDo(setTodoList);
     })
     .catch((err) => console.log(err));
@@ -34,17 +33,14 @@ const deleteToDo = (_id, setToDoList) => {
   axios
     .post(`${baseUrl}/delete`, { _id })
     .then((data) => {
-      console.log("task deleted");
       getAllToDo(setToDoList);
     })
     .catch((err) => console.log(err));
 };
 const completeTodo = (_id, setToDoList) => {
-  console.log("int del funcitons")
   axios
     .put(`${baseUrl}/completed`, { _id })
     .then((data) => {
-      console.log("task marked done!");
       getAllToDo(setToDoList);
     })
     .catch((err) => console.log(err));
