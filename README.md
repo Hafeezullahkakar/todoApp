@@ -102,8 +102,20 @@ Thank you for using the Todo App! If you have any questions or feedback, please 
    This will open a new cypress tab. Select e2e testing and your favourite browser. In browser, select 
    todo.cy.js file and the test will run.
 
-   Below is the screenshot:
 
    
+
+## Testing Backend with Jest
+
+#Go to backend
+#run this command:
+ ```bash
+ 
+  npx jest
+   
+   ```
+<img width="957" alt="image" src="https://github.com/Hafeezullahkakar/todoApp/assets/72004991/e36c18c0-bacf-4b94-a914-8d0c2b03bdaa">
+
+
 
 
