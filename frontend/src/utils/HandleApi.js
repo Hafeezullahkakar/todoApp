@@ -3,7 +3,8 @@ import axios from "axios";
 const baseUrl = "http://localhost:5000";
 
 const getAllToDo = (setToDo) => {
-  axios.get(baseUrl).then(({ data }) => {
+  axios.get(baseUrl).then((dat) => {
+    let data = dat.data.todo;
     setToDo(data);
   });
 };
@@ -18,25 +19,18 @@ const addToDo = (task, setText, setTodoList) => {
     .catch((err) => console.log(err));
 };
 
-const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
-  axios
-    .post(`${baseUrl}/update`, { _id: toDoId, text })
-    .then((data) => {
-      setText("");
-      setIsUpdating(false);
-      getAllToDo(setToDo);
-    })
-    .catch((err) => console.log(err));
-};
+
 
 const deleteToDo = (_id, setToDoList) => {
   axios
-    .post(`${baseUrl}/delete`, { _id })
+    .delete(`${baseUrl}/delete/${_id}`) // Append the ID to the URL as a parameter
     .then((data) => {
       getAllToDo(setToDoList);
     })
     .catch((err) => console.log(err));
 };
+
+
 const completeTodo = (_id, setToDoList) => {
   axios
     .put(`${baseUrl}/completed`, { _id })
@@ -46,4 +40,4 @@ const completeTodo = (_id, setToDoList) => {
     .catch((err) => console.log(err));
 };
 
-export { getAllToDo, addToDo, updateToDo, deleteToDo, completeTodo };
+export { getAllToDo, addToDo, deleteToDo, completeTodo };

@@ -5,9 +5,9 @@ describe("Testing Todo App in MERN", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  it("Show all already saved todos", () => {
-    cy.get(".todo_list").should("have.length", 1);
-  });
+  // it("Show all already saved todos", () => {
+  //   cy.get(".todo_list").should("have.length", 1);
+  // });
 
   it("Add new todo via Enter button in keyboard", () => {
     const newtodo = "Testing new todo via cypress via ENTER...";

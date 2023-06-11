@@ -13,6 +13,8 @@ function SingleTodo({
 }) {
   useEffect(() => {}, [isCompleted]);
 
+  console.log("task", task)
+
   function convertMongoDBTimestampToLocalDate(timestamp) {
     const date = new Date(timestamp);
 

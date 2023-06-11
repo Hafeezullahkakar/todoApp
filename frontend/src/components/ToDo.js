@@ -4,7 +4,6 @@ import { BiEdit } from "react-icons/bi";
 import {
   addToDo,
   getAllToDo,
-  updateToDo,
   deleteToDo,
   completeTodo,
 } from "../utils/HandleApi";
