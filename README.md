@@ -107,8 +107,7 @@ Thank you for using the Todo App! If you have any questions or feedback, please 
 
 ## Testing Backend with Jest
 
-#Go to backend
-#run this command:
+Go to backend and run this command:
  ```bash
  
   npx jest
